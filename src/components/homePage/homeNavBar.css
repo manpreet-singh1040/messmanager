@@ -1,0 +1,11 @@
+.logo{
+    
+    height: 7.5%;
+    width: 50%;
+}
+.contain{
+    display: inline-block;
+    width: 100%;
+    padding: 1.5vh;
+    background-color: rgb(26, 82, 132);
+}

@@ -1,0 +1,47 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    background-color: rgb(255, 255, 255,0.2);
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 6px 14px 0px;
+    top:0px;
+    left: 0px;
+    position:sticky;
+    width: 100vw;
+    z-index: 100;
+    backdrop-filter: blur(10px); 
+}
+.loginlink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2vw;
+}
+.loginLinkText{
+    text-decoration: none;
+    color: rgb(149 56 159);
+    background: transparent;
+    padding: 3px;
+    display: flex;
+    font-size: 15px;
+}
+.loginLinkText:hover{
+    color: black;
+    
+}
+.listitem{
+    list-style: none;
+    background-color: transparent;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    padding: 2px;
+    font-size: 15px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}

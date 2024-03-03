@@ -1,25 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import { Component } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import NavBar from "./components/navbar";
+import Login from "./components/login";
+import HomeNavBar from "./components/homePage/homeNavBar";
+import Rollnoform from "./components/rollnoform";
+class App extends Component {
+  /*constructor(props){
+    super(props);
+  }*/
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  render() {
+    return (
+      <BrowserRouter>
+        <div>
+          <Routes>
+            <Route path="/" element={
+              <div>
+                <NavBar />
+                <h1>homepage</h1>
+              </div>
+            } />
+            <Route
+              path="/user/:userName"
+              element={
+                <div style={{ height: `5000px` }}>
+                  <HomeNavBar />
+                  <NavBar />
+                  <Rollnoform />
+                </div>
+              }
+            />
+
+            <Route path="/about" element={<h1>about</h1>} />
+            <Route
+              path="/login"
+              element={
+                <div style={{ display: `inline-block`, height: `5000px` }}>
+                  <NavBar />
+                  <Login />
+                </div>
+              }
+            />
+          </Routes>
+        </div>
+      </BrowserRouter>
+    );
+  }
 }
-
 export default App;

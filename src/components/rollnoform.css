@@ -1,0 +1,45 @@
+.a1{
+    margin-top: 50px;
+    display: flex;
+    height: 50vh;
+    width: 450px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.a2{
+    margin-top: 0px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.a1 div{
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    color: black;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 2px;
+}
+
+.a1 input{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+.a2:hover{
+    background-color: #080710;
+    color: #ffffff;
+    box-shadow: 0px 5px 18px 1px;
+}
