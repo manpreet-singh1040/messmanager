@@ -7,11 +7,11 @@ const DisplayBill=(props)=>{
         console.log(props.roll);
         return(
             <div>
-                <WelcomeUser name={props.billData[0].Name} roomno={props.billData[0].RoomNo}/>
+                <WelcomeUser name={props.billData[0][1].Name} roomno={props.billData[0][1].RoomNo}/>
                 {
                     props.billData.map((e,i)=>{
                         return(
-                            <MonthlyBill key={i}  month={`January`} nod={e.Diet} diet={e.Dietrate} bda={e.Ddietrate} extra={e.Extra} guest={e.Guest} total={e.Total} ba={`17500`}/>
+                            <MonthlyBill key={i}  month={e[0]} nod={e[1].Diet} diet={e[1].Dietrate} bda={e[1].Ddietrate} extra={e[1].Extra} guest={e[1].Guest} total={e[1].Total} ba={`17500`}/>
                         )
                     })
                 }

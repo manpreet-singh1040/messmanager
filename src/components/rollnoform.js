@@ -21,7 +21,7 @@ const Rollnoform=()=>{
                 year:24
             };
             let resdata=[];
-            fetch(`http://98.70.72.205:3000/getdata`,{
+            fetch(`https://bandacollege.azurewebsites.net/getitlady`,{
                 method:`POST`,
                 headers:{
                     'Content-Type': 'application/json'
