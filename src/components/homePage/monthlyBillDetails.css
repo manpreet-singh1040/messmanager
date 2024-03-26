@@ -17,6 +17,7 @@
 }
 .faq3{
     z-index: 99;
+    overflow: scroll;
 }
 .faq2 button{
     border-radius: 50px;
