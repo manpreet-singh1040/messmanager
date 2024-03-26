@@ -1,0 +1,17 @@
+.A{
+    text-align: center;
+    background-color: rgba(196, 236, 223, 0);
+    font-size: 20px;
+    margin: 5px;
+}
+.Ab{
+    margin: 3px;
+}
+.faq5{
+    background-color: rgba(0, 0, 255, 0.332);
+    margin: 20px;
+    height: 350px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 20px;
+}

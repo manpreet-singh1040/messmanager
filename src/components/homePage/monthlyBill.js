@@ -1,17 +1,33 @@
-
-
+import { useState } from 'react'
+import './monthlyBill.css'
+import MonthlyBillDetail from './monthlyBillDetail';
 const MonthlyBill=(props)=>{
-
+    const[moreD,setMoreD]=useState(false);
+    const moreDetail=()=>{
+        console.log(`hey got ya call ${moreD}`);
+        if(moreD)
+        {
+            console.log(`working on it???`);
+            return(<MonthlyBillDetail setMoreD={setMoreD} month={props.month} nod={props.nod} diet={props.diet} bda={props.bda} extra={props.extra} guest={props.guest} total={props.total} ba={`17500`}/>)
+        }
+    }
+    const handleMoreD=()=>{
+        if(!moreD)
+        {
+            setMoreD(true);
+        }
+    }
     return(
-        <div style={{display:`flex`,justifyContent:`space-evenly`,backgroundColor:`lightblue`}}>
-            <div className="A" style={{display:`inline-block`}}>{`${props.month}`}</div>
-            <div className="A" style={{display:`inline-block`}}>{`${props.nod}`}</div>
-            <div className="A" style={{display:`inline-block`}}>{`${props.diet}`}</div>
-            <div className="A" style={{display:`inline-block`}}>{`${props.bda}`}</div>
-            <div className="A" style={{display:`inline-block`}}>{`${props.extra}`}</div>
-            <div className="A" style={{display:`inline-block`}}>{`${props.guest}`}</div>
-            <div className="A" style={{display:`inline-block`}}>{`${props.total}`}</div>
-            <div className="A" style={{display:`inline-block`}}>{`${props.ba}`}</div>
+        <div className='faq5'>
+            <div className="A"><b>MONTH AND YEAR:</b><br></br>{`${props.month}`}</div>
+            <hr></hr>
+            <div className="A"><b>MONTHLY BILL:</b><br></br>{`${props.total}`}</div>
+            <hr></hr>
+            <div className="A"><b>BALANCE AMOUNT:</b><br></br>{`${props.ba}`}</div>
+            <button className='Ab' onClick={handleMoreD}>More Detail</button>
+            {
+                moreDetail()
+            }
         </div>
     )
 }

@@ -2,13 +2,16 @@
 
 const WelcomeUser=(props)=>{
     return(
-        <div style={{display:`flex`,justifyContent:`space-between`}}>
-            <div>
-                <img src="https://i.gifer.com/bfB.gif" alt="hello-gif" style={{display:`inline-flex`,height:`20vh`,flexGrow:`1`}}></img>
+        <div style={{border:`2px solid black`,borderRadius:`10px`}}>
+            <div style={{fontWeight:`bolder`,color:`white`,backgroundColor:`darkblue`,width:`100%`,fontSize:`20px`,paddingLeft:`5%`,borderRadius:`10px 10px 0px 0px`}}>
+                Welcome
             </div>
             <div style={{width:`100%`}}>
                 <div style={{display:`flex`,alignItems:"center",justifyContent:`center`,height:`50%`,fontSize:`27px`}}>HELLO!!{`${props.name}`}</div>
                 <div style={{display:`flex`,alignItems:"center",justifyContent:`center`,height:`50%`,fontSize:`27px`}}> ROOM No.{`${props.roomno}`}</div>
+                <table>
+                    
+                </table>
             </div>
         </div>
     )

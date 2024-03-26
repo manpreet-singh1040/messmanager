@@ -1,0 +1,12 @@
+.faq6{
+    background-color: rgba(255, 235, 205, 0);
+    display: block;
+    height: 90%;
+    width: 90%;
+}
+.faq7{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}

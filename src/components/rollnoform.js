@@ -9,19 +9,36 @@ const Rollnoform=()=>{
     const handleInput=(event)=>{
         setRollno(event.target.value);
     }
-    
-
-    
     const handleSubmit=()=>{
         if(rollno.length===8)
         {
-            let reqdata={
+           /* let reqdata={
                 rollno:rollno,
                 month:1,
                 year:24
-            };
-            let resdata=[];
-            fetch(`https://bandacollege.azurewebsites.net/getitlady`,{
+            };*/
+            let resdata={Name:"Manpreet Singh",RoomNo:539,bill:[
+                [
+                    ["Month","jan24"],
+                ["diet",36],
+                ["dietRate",24],
+                ["ddiestrate",850],
+                ["extra",425],
+                ["guest",0],
+                ["total",1275]
+                ],
+                [
+                    ["Month","nov23"],
+                ["diet",72],
+                ["dietRate",23],
+                ["ddiestrate",1656],
+                ["extra",946],
+                ["guest",0],
+                ["total",2661]
+                ]
+
+            ]};
+            /*fetch(`https://bandacollege.azurewebsites.net/getitlady`,{
                 method:`POST`,
                 headers:{
                     'Content-Type': 'application/json'
@@ -43,8 +60,12 @@ const Rollnoform=()=>{
                     console.log(resdata);
                     setData(resdata);
                  }
+                 else{
+                    console.log(`error in fecth details!!!`)
+                 }
                 //console.log(rollno);
-            })
+            })*/
+            setData(resdata);
             }
            else{
             if(data.length!==0)
@@ -71,7 +92,7 @@ const Rollnoform=()=>{
             </div>
             <br></br>
             </div>
-            <div style={{backgroundColor:`rgb(255 255 255 / 20%)`,display:`inline-flex`,width:`100%`,backdropFilter:`blur(10px)`,margin:`10px`,padding:`15px`, borderRadius:`10px`,justifyContent:`center`,alignItems:`center`}}>
+            <div style={{backgroundClip:`transparent`,display:`inline-flex`,width:`100%`,margin:`10px`,padding:`0px`, borderRadius:`15px`,justifyContent:`center`,alignItems:`center`,border:`2px solid black`}}>
             {
                 disFun()
             }
