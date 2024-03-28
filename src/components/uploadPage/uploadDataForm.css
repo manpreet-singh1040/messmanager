@@ -1,0 +1,22 @@
+.faq10{
+    display: inline-flex;
+    height: 65vh;
+    width: 60vw;
+    justify-content:center;
+    align-items:center;
+    margin: 15px;
+    padding: 10px;
+    border: 0.75px solid white;
+    border-radius: 15px;
+    background-color: rgba(125, 157, 182, 0.378);
+    backdrop-filter: blur(10px);
+}
+.faq10 div h2{
+    text-align: center;
+    text-decoration: underline;
+}
+.faq11{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

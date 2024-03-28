@@ -5,6 +5,7 @@ import NavBar from "./components/navbar";
 import Login from "./components/login";
 import HomeNavBar from "./components/homePage/homeNavBar";
 import Rollnoform from "./components/rollnoform";
+import UploadPage from "./components/uploadPage/uploadPage";
 class App extends Component {
   /*constructor(props){
     super(props);
@@ -18,7 +19,7 @@ class App extends Component {
             <Route path="/" element={
               <div>
                 <NavBar />
-                <h1>homepage</h1>
+                <UploadPage/>
               </div>
             } />
             <Route

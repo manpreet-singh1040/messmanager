@@ -12,33 +12,13 @@ const Rollnoform=()=>{
     const handleSubmit=()=>{
         if(rollno.length===8)
         {
-           /* let reqdata={
+            let reqdata={
                 rollno:rollno,
                 month:1,
                 year:24
-            };*/
-            let resdata={Name:"Manpreet Singh",RoomNo:539,bill:[
-                [
-                    ["Month","jan24"],
-                ["diet",36],
-                ["dietRate",24],
-                ["ddiestrate",850],
-                ["extra",425],
-                ["guest",0],
-                ["total",1275]
-                ],
-                [
-                    ["Month","nov23"],
-                ["diet",72],
-                ["dietRate",23],
-                ["ddiestrate",1656],
-                ["extra",946],
-                ["guest",0],
-                ["total",2661]
-                ]
-
-            ]};
-            /*fetch(`https://bandacollege.azurewebsites.net/getitlady`,{
+            };
+            let resdata;
+            fetch(`http://localhost:3001/checkBill`,{
                 method:`POST`,
                 headers:{
                     'Content-Type': 'application/json'
@@ -64,10 +44,11 @@ const Rollnoform=()=>{
                     console.log(`error in fecth details!!!`)
                  }
                 //console.log(rollno);
-            })*/
-            setData(resdata);
+            })
+           // setData(resdata);
             }
            else{
+            alert(`invalid rollno.!!!`);
             if(data.length!==0)
             {
                 setData([]);
@@ -78,7 +59,7 @@ const Rollnoform=()=>{
         if(data.length!==0)
                 {
                     
-                    return(<DisplayBill billData={data} roll={rollno}/>);
+                    return(<DisplayBill billData={data[0]} roll={rollno}/>);
                 }
     }
     return(
