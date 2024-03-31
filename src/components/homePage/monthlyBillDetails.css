@@ -5,19 +5,18 @@
     width: 100%;
     top: 0px;
     left:0px;
-    z-index: 998;
     backdrop-filter: blur(10px);
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: scroll;
 }
 .faq2{
     z-index: 999;
     width: 80%;
 }
 .faq3{
-    z-index: 99;
-    overflow: scroll;
+    display: inline-flex;
 }
 .faq2 button{
     border-radius: 50px;
@@ -33,11 +32,22 @@
 #monthlybd{
     border: 2px solid black;
     background-color: rgba(60, 48, 169, 0.51);
+    border-collapse: collapse;
+    z-index:inherit;
 }
 #monthlybd td{
     padding: 5px;
     font-size:large;
     text-align: center;
     border: 0.5px solid red;
+    z-index: inherit;
+}
+@media screen and (max-width:425px){
+    #monthlybd{
+        
+        position: relative;
+        left: 65px;
+    }
+    
 }
 
