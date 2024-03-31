@@ -13,12 +13,10 @@ const Rollnoform=()=>{
         if(rollno.length===8)
         {
             let reqdata={
-                rollno:rollno,
-                month:1,
-                year:24
+                rollno:parseInt(rollno),
             };
             let resdata;
-            fetch(`http://localhost:3001/checkBill`,{
+            fetch(`https://bandacollege.azurewebsites.net/getitlady`,{
                 method:`POST`,
                 headers:{
                     'Content-Type': 'application/json'
@@ -34,7 +32,7 @@ const Rollnoform=()=>{
             })
             .then((d)=>{
                 resdata=d;
-                //console.log(d);
+                console.log(d);
                 if(resdata.length!==0)
                 {
                     console.log(resdata);
@@ -59,7 +57,7 @@ const Rollnoform=()=>{
         if(data.length!==0)
                 {
                     
-                    return(<DisplayBill billData={data[0]} roll={rollno}/>);
+                    return(<DisplayBill billData={data} roll={rollno}/>);
                 }
     }
     return(
