@@ -4,7 +4,7 @@ const MonthlyBillDetail=(props)=>{
     const lessD=(event)=>{
         console.log(event.target)
         console.log(event.target.className==="faq1"|| event.target.className==="faq4");
-        if(event.target.className==="faq1"|| event.target.className==="faq4")
+        if(event.target.className==="faq1")
         {
 
             props.setMoreD(false);
@@ -13,9 +13,6 @@ const MonthlyBillDetail=(props)=>{
     console.log(`inside monthlybill details`);
     return(
         <div className="faq1" onClick={lessD}>
-            <div className="faq2">
-                <button onClick={lessD} className="faq4">X</button>
-            </div>
             <div className="faq3">
                 <table id="monthlybd">
                     <tr>
