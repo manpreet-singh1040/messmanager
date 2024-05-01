@@ -1,18 +1,18 @@
 import {useState} from "react";
 import "./uploadDataForm.css"
-
-
+import {useNavigate} from 'react-router-dom'
 const UploadDataForm=()=>{
     const[xFile,setxFiles]=useState(null);
     const[hostel,sethostel]=useState('');
     const[submittion,setsubmittion]=useState(false);
-
+    const navigate=useNavigate();
     const submitData=()=>{
         if(hostel!=='' && xFile!==null)
         {
-            fetch(`http://localhost:3001/`,{
+            fetch(`https://backend-messmanager.onrender.com/uploadbill`,{
                 method:`POST`,
                 headers:{"Content-Type":"application/json"},
+                credentials:"include",
                 body:JSON.stringify(xFile)
             })
             .then((res)=>{
@@ -23,13 +23,15 @@ const UploadDataForm=()=>{
                 return res.json();
             })
             .then((mes)=>{
-                if(mes.message==="submitted")
+                if(mes.login)
                 {
                     alert(`form submitted!!`);
                     setsubmittion(true);
                 }
                 else{
-                    alert(`form not submitted!!`);
+                    alert(`form not submitted!! because user not logged in`);
+                    navigate('/login');
+                    
                 }
                 sethostel('');
                 setxFiles(null);

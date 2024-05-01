@@ -9,6 +9,7 @@ const WelcomeUser=(props)=>{
             <div style={{width:`100%`}}>
                 <div style={{display:`flex`,alignItems:"center",justifyContent:`center`,height:`50%`,fontSize:`27px`}}>HELLO!!{`${props.name}`}</div>
                 <div style={{display:`flex`,alignItems:"center",justifyContent:`center`,height:`50%`,fontSize:`27px`}}> ROOM No.{`${props.roomno}`}</div>
+                <div style={{display:`flex`,alignItems:"center",justifyContent:`center`,height:`50%`,fontSize:`27px`}}> HOSTEL-{`${props.hostel}`}</div>
                 <table>
                     
                 </table>

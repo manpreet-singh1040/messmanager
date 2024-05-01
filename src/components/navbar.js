@@ -6,14 +6,11 @@ const NavBar=()=>{
         return(
             
             <div className='container'>
-                <div>
-                    <Link to='/'>
-                    </Link>
-                </div>
                 
-                    <ul style={{display:`flex`,margin:`1vh`,padding:`1vh`,overflow:`auto`}}>
-                        <li className='listitem' ><Link to='/user/:userName'><b>Check bill</b></Link></li>
-                        <li className='listitem'><Link to='/about'><b>About</b></Link></li>
+                    <ul style={{display:`flex`,margin:`1vh`,overflow:`auto`, float:'left'}}>
+                        <li className='listitem'><Link to='/'><b>Home</b></Link></li>
+                        <li className='listitem' ><Link to='/user'><b>Check Bill</b></Link></li>
+                        <li className='listitem'><Link to='/uploadBill'><b>Upload Bill</b></Link></li>
                     </ul>
                     <div className='loginlink'>
                                  <Link to='/login' className='loginLinkText' ><b>Login/Register</b></Link>

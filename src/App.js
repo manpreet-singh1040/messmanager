@@ -1,29 +1,31 @@
-import { Component } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Component, useState } from "react";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import "./App.css";
 import NavBar from "./components/navbar";
 import Login from "./components/login";
 import HomeNavBar from "./components/homePage/homeNavBar";
 import Rollnoform from "./components/rollnoform";
-import UploadPage from "./components/uploadPage/uploadPage";
-class App extends Component {
+import UploadPag from "./components/uploadPage/uploadPage";
+import Checkb from "./components/checkb";
+
+
+const App=()=> {
   /*constructor(props){
     super(props);
   }*/
-
-  render() {
     return (
       <BrowserRouter>
         <div>
           <Routes>
             <Route path="/" element={
-              <div>
-                <NavBar />
-                <UploadPage/>
-              </div>
+              <div style={{ height: `5000px` }}>
+              <HomeNavBar />
+              <NavBar />
+              <Checkb/>
+            </div>
             } />
             <Route
-              path="/user/:userName"
+              path="/user"
               element={
                 <div style={{ height: `5000px` }}>
                   <HomeNavBar />
@@ -32,14 +34,15 @@ class App extends Component {
                 </div>
               }
             />
-
-            <Route path="/about" element={<h1>about</h1>} />
+            <Route path="/uploadbill" element={
+                <UploadPag/>
+            } />
             <Route
               path="/login"
               element={
-                <div style={{ display: `inline-block`, height: `5000px` }}>
+                <div style={{ display: `block`, height: `5000px` }}>
                   <NavBar />
-                  <Login />
+                  <Login/>
                 </div>
               }
             />
@@ -47,6 +50,6 @@ class App extends Component {
         </div>
       </BrowserRouter>
     );
-  }
+  
 }
 export default App;
