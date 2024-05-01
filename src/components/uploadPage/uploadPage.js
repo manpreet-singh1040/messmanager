@@ -19,7 +19,7 @@ const UploadPag=()=>{
                navigate('/login');
             }
     })
-    },[navigate]);
+    });
     return(
         <>
         <HomeNavBar/>
