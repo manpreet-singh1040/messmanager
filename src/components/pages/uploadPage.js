@@ -11,7 +11,7 @@ const UploadPage=(props)=>{
             console.log(`"hey checking ${login}"`);
             navigate('/login');
         }
-    })
+    },[])
     
         return(
             <div>

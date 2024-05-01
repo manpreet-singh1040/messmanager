@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import "./uploadDataForm.css"
 import UploadDataForm from "./uploadDataForm";
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import HomeNavBar from "../homePage/homeNavBar";
 import NavBar from "../navbar";
 

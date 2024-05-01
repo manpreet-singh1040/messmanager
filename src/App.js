@@ -1,5 +1,5 @@
-import { Component, useState } from "react";
-import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import "./App.css";
 import NavBar from "./components/navbar";
 import Login from "./components/login";

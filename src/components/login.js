@@ -1,7 +1,7 @@
 import {  useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import './login.css';
-const Login= (props)=>{
+const Login= ()=>{
     let navigate=useNavigate();
     const [login,setlogin]=useState(false);
     useEffect(()=>{

@@ -1,9 +1,9 @@
 
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 const Checkb=()=>{
 
 
-    const navigate=useNavigate();
+    //const navigate=useNavigate();
     const handleclick=()=>{
         fetch('https://backend-messmanager.onrender.com/getcok',{
             credentials: 'include' 
