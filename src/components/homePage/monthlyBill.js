@@ -20,7 +20,7 @@ const MonthlyBill=(props)=>{
     }
     return(
         <div className='faq5'>
-            <div className="A"><b>MONTH AND YEAR:</b><br></br>{`${props.month}`}</div>
+            <div className="A"><b>MONTH AND YEAR:</b><br></br>{`${months[props.month]}`}</div>
             <hr></hr>
             <div className="A"><b>MONTHLY BILL:</b><br></br>{`${props.total}`}</div>
             <hr></hr>
