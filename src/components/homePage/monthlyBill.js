@@ -2,13 +2,14 @@ import { useState } from 'react'
 import './monthlyBill.css'
 import MonthlyBillDetail from './monthlyBillDetail';
 const MonthlyBill=(props)=>{
+    let months=['Nil','JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
     const[moreD,setMoreD]=useState(false);
     const moreDetail=()=>{
         console.log(`hey got ya call ${moreD}`);
         if(moreD)
         {
             console.log(`working on it???`);
-            return(<MonthlyBillDetail setMoreD={setMoreD} month={props.month} nod={props.nod} diet={props.diet} bda={props.bda} extra={props.extra} guest={props.guest} total={props.total} ba={`17500`}/>)
+            return(<MonthlyBillDetail setMoreD={setMoreD} month={months[props.month]} nod={props.nod} diet={props.diet} bda={props.bda} extra={props.extra} guest={props.guest} total={props.total} ba={`17500`}/>)
         }
     }
     const handleMoreD=()=>{
